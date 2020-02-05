@@ -8,7 +8,11 @@ const config: webpack.Configuration = {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.css$/i,
         use: ['style-loader', 'css-loader']
       },
       {
@@ -16,9 +20,14 @@ const config: webpack.Configuration = {
         use: ['file-loader']
       },
       {
-        test: /\.tsx?$/,
+        test: /src.*\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.wasm$/,
+        type: 'javascript/auto',
+        loaders: ['arraybuffer-loader']
       }
     ]
   },
@@ -31,4 +40,5 @@ const config: webpack.Configuration = {
   },
   plugins: [new HtmlWebpackPlugin(), new MonacoWebpackPlugin({ languages: [] })]
 };
+
 export default config;

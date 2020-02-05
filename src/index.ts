@@ -6,8 +6,17 @@ import { loadWASM } from 'onigasm'; // peer dependency of 'monaco-textmate'
 import { Registry } from 'monaco-textmate'; // peer dependency
 import { wireTmGrammars } from 'monaco-editor-textmate';
 
-export async function liftOff() {
-  await loadWASM(require('file-loader!onigasm/lib/onigasm.wasm')); // See https://www.npmjs.com/package/onigasm#light-it-up
+import('./theme/dark-theme.json').then(data => {
+  monaco.editor.defineTheme('dark', data as any);
+});
+
+import './index.sass';
+
+(async () => {
+  console.log('START');
+  monaco.languages.register({ id: 'sass' });
+
+  await loadWASM(require('onigasm/lib/onigasm.wasm')); // See https://www.npmjs.com/package/onigasm#light-it-up
 
   const registry = new Registry({
     getGrammarDefinition: async scopeName => {
@@ -636,17 +645,26 @@ export async function liftOff() {
       };
     }
   });
-
+  console.log('TEST');
   // map of monaco "language id's" to TextMate scopeNames
   const grammars = new Map();
+
   grammars.set('sass', 'source.sass');
 
   await wireTmGrammars(monaco, registry, grammars);
-}
-liftOff();
-document.createElement('div').id = 'container';
-//@ts-ignore
-monaco.editor.create(document.getElementById('container'), {
-  value: '.class\n  margin: 200rem',
-  language: 'sass'
-});
+  console.log('TEST 2');
+
+  // const div = document.createElement('div');
+
+  // document.body.appendChild(div);
+  // console.log('test 3 ');
+
+  monaco.editor.setTheme('dark');
+  const a = monaco.editor.create(document.body, {
+    value: '.class\n  margin: 200rem',
+    language: 'sass',
+    dimension: { height: window.innerHeight, width: window.innerWidth }
+  });
+
+  console.log('END');
+})();
