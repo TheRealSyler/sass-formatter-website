@@ -1,10 +1,14 @@
 import { resolve } from 'path';
 import webpack = require('webpack');
-import HtmlWebpackPlugin = require('html-webpack-plugin');
 import MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+import HtmlWebpackPlugin = require('html-webpack-plugin');
+// import BAP = require('webpack-bundle-analyzer');
 
 const config: webpack.Configuration = {
-  entry: './src/index.ts',
+  entry: {
+    'init-styles': './src/init-styles.ts',
+    index: './src/index.ts'
+  },
   module: {
     rules: [
       {
@@ -35,10 +39,18 @@ const config: webpack.Configuration = {
     extensions: ['.tsx', '.ts', '.js']
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: resolve(__dirname, 'dist')
   },
-  plugins: [new HtmlWebpackPlugin(), new MonacoWebpackPlugin({ languages: [] })]
+
+  plugins: [
+    // new BAP.BundleAnalyzerPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.html'
+    }),
+    new MonacoWebpackPlugin({ languages: [] })
+  ]
 };
 
 export default config;

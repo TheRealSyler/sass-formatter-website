@@ -1,3 +1,80 @@
+$bg: #1E1E1E
+$text: #9cdcfe
+$shadow: #0002
+$fonts: monaco, Consolas, 'Lucida Console', monospace
+
 body
   padding: 0
   margin: 0
+  background: $bg
+  color: $text
+  font-family: $fonts
+  display: flex
+  flex-flow: column
+  height: 100vh
+
+.header
+  background: lighten($bg, 2.5)
+  box-shadow: 0 1px 4px $shadow
+  padding: 1rem 2rem
+
+.content
+  flex-grow: 1
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 1rem
+  margin: 1rem
+
+.editor-container
+  border-radius: 2px
+  overflow: hidden
+
+.btn
+  color: $text
+  background: lighten($bg, 20)
+  border: none
+  border-radius: 2px
+  font-family: $fonts
+
+a
+  color: $text
+  text-decoration: none
+  outline: none
+  transition: color 100ms ease
+
+  &:hover
+    color: darken($text, 40)
+
+  &:active
+    text-decoration: underline
+
+.big-font
+  font-size: 1.5rem
+
+.loader-container
+  background: $bg
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+.loader
+  position: fixed
+  border: 5px solid lighten($bg, 15)
+  border-top: 5px solid $text
+  border-radius: 50%
+  background: #0000
+  width: 25px
+  height: 25px
+  animation: spin 1s linear infinite
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+
+  to
+    transform: rotate(360deg)

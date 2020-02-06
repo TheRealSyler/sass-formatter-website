@@ -1,6 +1,6 @@
 import theme from './vscode-dark-plus-raw.json';
 import { writeFileSync } from 'fs';
-import { white, reset } from './utils';
+import { white, reset } from '../utils';
 
 // *****************************************************
 // **** convert vscode dark+ theme to monaco theme. ****

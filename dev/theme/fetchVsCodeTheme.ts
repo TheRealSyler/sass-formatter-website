@@ -1,8 +1,7 @@
-import Fetch from 'node-fetch';
 import { writeFileSync } from 'fs';
-import { white, reset, red } from './utils';
 
 import Merge from 'deepmerge';
+import { getData, reset, white } from '../utils';
 
 const baseUrl =
   'https://raw.githubusercontent.com/microsoft/vscode/master/extensions/theme-defaults/themes/dark_defaults.json';
@@ -43,17 +42,4 @@ export async function fetchVscodeTheme() {
   delete theme['$schema'];
   writeFileSync('dev/theme/vscode-dark-plus-raw.json', JSON.stringify(theme, null, 2));
   console.log(white, 'Fetched Vscode Theme', reset);
-}
-
-async function getData(url: string) {
-  try {
-    return JSON.parse((await (await Fetch(url)).text()).replace(/"[\t ]*\/\/.*?$/gm, '"'));
-  } catch (err) {
-    console.log(
-      `[dev/theme/fetchVsCodeTheme.ts]\nCould not fetch ${white}${url}: ${red} \n`,
-      err,
-      reset
-    );
-    process.exit(1);
-  }
 }
