@@ -3,9 +3,18 @@ import { Registry } from 'monaco-textmate';
 import { wireTmGrammars } from 'monaco-editor-textmate';
 
 import { loadWASM } from 'onigasm';
+import { InitFormatterVersionSelection } from './selectVersion';
+import { ensureLatestFormatterIsLoaded, initialEditorValue } from './utils';
+
+let loadedAllFormatters = false;
+let currentFormatter: string | null = null;
+
+export const setLoadedAllFormatters = (v: boolean) => (loadedAllFormatters = v);
+export const setCurrentFormatter = (v: string) => (currentFormatter = v);
+
+InitFormatterVersionSelection();
 
 (async () => {
-  console.log('INIT EDITOR');
   await loadWASM(require('onigasm/lib/onigasm.wasm'));
 
   monaco.editor.defineTheme(
@@ -13,15 +22,11 @@ import { loadWASM } from 'onigasm';
     await (await fetch('http://localhost:4040/themes/dark-plus')).json()
   );
 
-  // await import('./theme/dark-theme.json').then(data => {
-  //   monaco.editor.defineTheme('dark', data as any);
-  // });
-
   monaco.languages.register({ id: 'sass' });
   const registry = new Registry({
     getGrammarDefinition: async () => ({
       format: 'json',
-      content: (await import('./grammars/sass.tmLanguage.json')) as any
+      content: await (await fetch('http://localhost:4040/grammars/sass')).json()
     })
   });
 
@@ -33,12 +38,11 @@ import { loadWASM } from 'onigasm';
 
   monaco.editor.setTheme('dark');
 
-  const inputEditorContainer = document.getElementById('input-editor')!;
-  const outputEditorContainer = document.getElementById('output-editor')!;
+  const editorContainer = document.getElementById('editor')!;
   const loader = document.getElementById('loader')!;
 
   const editorSettings: monaco.editor.IStandaloneEditorConstructionOptions = {
-    value: '.class\n  margin: 200rem',
+    value: initialEditorValue,
     language: 'sass',
     minimap: {
       enabled: false
@@ -46,19 +50,36 @@ import { loadWASM } from 'onigasm';
     autoIndent: 'full',
     renderWhitespace: 'all'
   };
-  const inputEditor = monaco.editor.create(inputEditorContainer, editorSettings);
-
-  const outputEditor = monaco.editor.create(outputEditorContainer, {
-    readOnly: true,
-    ...editorSettings
-  });
+  const editor = monaco.editor.create(editorContainer, editorSettings);
 
   window.addEventListener('resize', () => {
-    inputEditor.layout();
-    outputEditor.layout();
+    editor.layout();
   });
 
-  inputEditor.onKeyUp(() => outputEditor.setValue(inputEditor.getValue()));
+  await ensureLatestFormatterIsLoaded();
 
-  loader.style.display = 'none';
+  window.addEventListener('keydown', e => {
+    if (e.key.toLowerCase() === 's' && e.ctrlKey) {
+      e.preventDefault();
+      e.stopPropagation();
+      let value = '';
+      if (loadedAllFormatters) {
+        value = window.formatters[currentFormatter!](editor.getValue());
+      } else {
+        value = window.latestFormatter(editor.getValue());
+      }
+      const model = editor.getModel()!;
+      const lineCount = model?.getLineCount();
+      const lastCol = model?.getLineMaxColumn(lineCount);
+      editor.executeEdits('format', [
+        {
+          range: new monaco.Range(0, 0, lineCount, lastCol),
+          text: value
+        }
+      ]);
+    }
+  });
+
+  loader.style.pointerEvents = 'none';
+  loader.style.opacity = '0';
 })();

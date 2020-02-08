@@ -6,18 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sass Formatter</title>
+  <script src="https://kit.fontawesome.com/f7ffc63c63.js" crossorigin="anonymous"></script>
+  <script src="http://localhost:4040/cdn/latest"></script>
+  <script src="http://localhost:4040/cdn/all"></script>
 </head>
 
 <body>
   <header class="header">
-    <a href="https://github.com/TheRealSyler/sass-formatter" class="big-font">Sass Formatter</a>
+    <a href="https://github.com/TheRealSyler/sass-formatter" class="header-title">Sass Formatter</a>
 
-    <!--  <button class="btn">test</button> -->
+    <select class="select-css" id="formatter-versions" disabled>
+      <option>
+        Loading Versions
+      </option>
+
+    </select>
+
+
+    <a class="header-report-bug"
+      href="https://github.com/TheRealSyler/sass-formatter/issues/new?assignees=TheRealSyler&labels=bug&template=bug_report.md&title=">
+      <i class="fas fa-bug"></i> Report</a>
+
   </header>
 
   <div class="content">
-    <div class="editor-container" id="input-editor"></div>
-    <div class="editor-container" id="output-editor"></div>
+    <div class="center-text">Press <code>Ctrl + S</code> to format</div>
+    <div class="editor-container" id="editor"></div>
+
+
   </div>
 
   <div id="loader" class="loader-container">
