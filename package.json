@@ -2,6 +2,7 @@
   "name": "sass-formatter-website",
   "version": "1.0.0",
   "description": "",
+  "main": "dist/index.html",
   "scripts": {
     "postinstall": "npm run get-sass-formatter-versions",
     "start": "npm run get-sass-formatter-versions && webpack-dev-server",
