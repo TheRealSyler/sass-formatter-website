@@ -1,0 +1,1423 @@
+{
+  "_id": "sass-formatter",
+  "_rev": "16-3bec95d5a06d5f141cda254c5c1be2b6",
+  "name": "sass-formatter",
+  "dist-tags": {
+    "latest": "0.4.4"
+  },
+  "versions": {
+    "0.0.1": {
+      "name": "sass-formatter",
+      "version": "0.0.1",
+      "description": "A typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "tsc -b",
+        "test": "tsc -b && jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+      },
+      "gitHead": "93d79968f661aad72b7b32c4a37a23889c0d3a38",
+      "_id": "sass-formatter@0.0.1",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-AoPppJ0aXEKcyzR+T8hsXIQcH9igiTJq1p4Bva4oE5/3y8Ar1baKRknF53BtyVFD4vb43lVTiH1gn7ZCSoz/4A==",
+        "shasum": "4e4787763048e35aa3c60cb4621a84462bc889a6",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.1.tgz",
+        "fileCount": 14,
+        "unpackedSize": 43344,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdf4I8CRA9TVsSAnZWagAAjK8P/A1JI9IWVbunP6zevAIu\n4dD9HybIYBMaqLbc0gilok6yWe8uofMJuZ0Ob3IL87ZRtTTxbtCKj+7tf2PL\nQQ1KtJOCDBZf5FOvoaRcHnLsWP7G2qBDS3jaSLRbhSY8nQFrA1bGmqxYucXw\nMPI2WnBulo9tUhbxNxnaqHdlbYJ3aOI8ZOPBbqwTRHczcu2+YqaH5TxS4kjg\nux3MB+vB4JmUuPvOKyY2wi4CswCvTAwDdUY7wxGcqxo497R7B5sGF6QKA8LA\nst5n9Tnj2EvxmtBDjygaPYzxUFHoXRbVR3iPPL4PAgjm+N3Lb8m8CZlzJ4z+\np4WTsJmIJ6vyV2q4P8iqmC4lx/RQobE48e8zDSKk/8NC2L+kR7qBo6uiorHm\nbvIYwSH9Vs2nGWJjcgStwM8vki1Z0IO/Kh7nFb69KOVwFxEkqvk+OBPFhWel\n2d/q6g8D7e5VMTCadfBYH979StwAi4WGBrWvu0ISVShqrxdPDOE9bVzfOmE3\n6iJMibfXEQwuzA/Rws2Iw5+VuE6geP2NqEuaw+oowqaUiqtkXSUQQ8XNT73x\ny5Ct76oFSpBlAJYBtskI7xfy4U9BaNlik2Gh+t4alEPSrlAJVGFWlryz8rkQ\n7DeyHklbeOVvnsC8ijYlcV5kHnOnDh34JLlcDaOcXVF+Myv7bqEi01ExWfJk\nErDM\r\n=BZnR\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.1_1568637499558_0.7627114816139864"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.2": {
+      "name": "sass-formatter",
+      "version": "0.0.2",
+      "description": "A typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "tsc -b",
+        "test": "tsc -b && jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+      },
+      "gitHead": "313ec16135979646d7087ef9a36263685c29fdff",
+      "_id": "sass-formatter@0.0.2",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-LxpHt9oyt9fPf6ONH93kvvQD+m48gGcJETsbEzOB+AYg48QgYgq2mdEZfL72dlFDQoURUaxM6xp8C0zIXddeGw==",
+        "shasum": "bf4f472763943dc2ceed29ea350988f70441e58e",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.2.tgz",
+        "fileCount": 14,
+        "unpackedSize": 44696,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdf46NCRA9TVsSAnZWagAAGm0QAKO7c6Oo93pdvN8OvNOk\nCudFpPAL/3ByO+Wikl9aJ6sYZ7kT6BuiVoYydfki07Snkwz+K89ul1MKbZgP\n2Py+150+cHBfiAepwOhwnTvAKy+zUYqI5yDTl9bZfOiat9E1egXKRuNFnB0x\nJTSe1g4NpsrEIGhUYOb2OJTG0+/krm/f91JFi8SeIhLBUz6wra4YZkccoVQ3\nXRgi+0lgVdshl05ikvraGOBNHj0LL+e5RlEanrADmhTYYJBbri9rW50TFAwV\nhgegr+JVTqkUcqd6VE4hLetGyoCLNRVwlk1udO7ZHopZ237LWlw3rsq8YdJe\nAxw8oO+xD95HpeuS2AwzhjIVutYSMPY16E3408SSTv1zYT+CXY9oi9ZfqT2L\nNqX5ohv8I53Ar9gPucjkyQmq9l+tEW8SzjO1Ol1RLYYWq+Jalu30rwZ9kO+h\nRnT4+cgY5bJlqgmGDAfJqvjd9LXMhaGcvPwDhjkcYLFGXsdorJfJQwbG8AES\n4BwiBdo10lVqhaTwL6tzd6Yf47BYcgc4ngErt4EGcnTf8cEOxlRXIiXTDo7G\npbTGK+gaLz55+vOv4ySjkUgUlDQCuO0LPivL0VC9fedaX8VxJSEVmzMCjqnk\n7MTPvutspETxULlNeUBQzYtjf/QE9UiAKM+4PY2W8hqRybDaIIU9EAx8AJIG\nXWcd\r\n=FqgQ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.2_1568640652657_0.09233750751603864"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.3": {
+      "name": "sass-formatter",
+      "version": "0.0.3",
+      "description": "A typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "tsc -b",
+        "test": "tsc -b && jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+      },
+      "gitHead": "ec64bdf1d7d030a723b90d51113c4565f433ca6a",
+      "_id": "sass-formatter@0.0.3",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-gxexMaDbDY7HOtoPTIWTODkNZXwM4AReLsopDWofClnpBp9jrS+1eTDSgibmu8kOKSZ4MQ1o5ECW3nlt0DrWZA==",
+        "shasum": "8b6269356757a27e93d63b36decfad25869bc73b",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.3.tgz",
+        "fileCount": 14,
+        "unpackedSize": 45069,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdf5+TCRA9TVsSAnZWagAAHvIP/3cxHIClscMcIJtsI2Zv\n/mZg+s4QJjPupZ1fkH4TXVf7XyvXTOqYQcmR9C+zl2TwV1JtoRMX8PaAjoTM\nDKI0axOtNuwKSZYMoho0FxaY2NPTHKiQEg9riyxz8ufXqsT1O4UmmSP89VVP\nV2nv0zou5JEiygBNF/h1JrzIpZKNN23rDKn25c7SrBhh+B6KwyI1UZCkmnWI\nM3Neyh0cPY1Y1jyP6CnuBRdEzBwKQhjw5Q/Gkn3t3jFdPraCeNqxpgEK28NF\nre+MjUY+iI/keHO4X7gTfVdD1kddUXm+VkTwcepLQIlEU8qtvbzaRe1/uFBq\nWXPrvXA8kQDD4A5Kb7tzPCEmXmyY1tY9/O8UdyyrPXtyzk7IDCPL+AvQgmoP\nUMFji7DUFeJpX7EsENa+ulIdGvc+CHJCtz8clzvZC7T5cQt8SQcIUsx9GdZX\nA8tzyk31xfhwcRiImWKQaWa3YnzFk8nMkmWlRGuKS3FvMVNyVMg0BPjIHuaY\nsGzN6TycVJVRsbh4eFI3bSliMhKciiTNXpmgkQ3WAST8QLoIpMB5t2pCX9fG\nsSLulua5wNm9XD3Mi2YtM3bzF7AgmmwBtjvhFtOaHU556CGKWiR7snX80ab0\n28LYnxSNuCA4P6T7fIvJRiX0zAOTXqzOEvRlhzeiO/9sGvPzfPQNNWpO4klJ\nsFjR\r\n=9BTE\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.3_1568645011221_0.3909977537616631"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.4": {
+      "name": "sass-formatter",
+      "version": "0.0.4",
+      "description": "A typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "^0.0.2"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "936e7bfac18df3578e7858203b555588a5076a0e",
+      "_id": "sass-formatter@0.0.4",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-jNQbF46iEBbk+uO3oQqDDcbv831HMETkWS/rv/DU0CMabrNChu5CtL66x4LaJf3zX3CtoW4ycfNR0e4TNYMHyg==",
+        "shasum": "7cd1cbace678ebd2b88a258286d9348c8f673a4f",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.4.tgz",
+        "fileCount": 10,
+        "unpackedSize": 33416,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdgeQyCRA9TVsSAnZWagAAF/QQAIDeJyObFFC01f3itpbh\nQMOorq5C0JdN+OlCjPVUdtwsF9Iktsk5Uy2jO+Vq5i+E9SfKhbxcbzw/c2na\n2rmSKnCeIuRzHOcFalSSJhBTUFMdJUn/EhODrEuN8964MLS4SUGZw2AS26W0\nbTu/OrD1Y7JS1JMgemgp7h+ou5Ev14OS3gqQ5sJwjYzSEPjmTxNPvk/Sho7P\nYQli6vn/0k6iH6POoFWta1pL6p3W0j7VLVCY7NVYj6g3lHpwCLrH8KZyE8a4\nGGsmwCp55ceyrqf0QPszgygmkV2JRpEeB/lT0bQrcvix3iUJzahWv81R3V3z\n9EawFOG15NeVyBGyZoot6DBIaMaiYlEVAgiNJN1FtwAkfK3xXPccRngRQkQC\n9UN1zwzKuQV6VteyWTXYoLKGlNFnv7vZUN52QxqX6MfNWGdmQGKrGsxa40CK\n2Hnefoa7ukPLHDLMs7R1LIFNRIDY9xZJAcdrEgv7LGeoSP2uZZrb9oA3XyXT\njp9uKL8gRtkG0tT7UNiBV7reL+0Fbm9x2cra36pdUhbLIR6SD0j4yeltUeL8\nyMJg4LlU1Ma34n/knOJWJ5dF+bvZXlSQOCfMRP1OlYLT5OIJK2ghxRO6+14k\nqXUjiw+L4b9qEniN8iQBtk7IUsUKdxaeE61c38HzmgW+urD5GEZWuQzJnXnw\nskac\r\n=sG+b\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.4_1568793649716_0.6662577256034559"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.5": {
+      "name": "sass-formatter",
+      "version": "0.0.5",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "^0.0.2"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "5206440aec36742d7e2db9b2a6d08c2e11398fee",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.0.5",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-7wQWezrnsV4pIcyOJxb4iYEDUV32hQMQDXf++YeAqMZ6iFjFf5dwGtjSeuxZpTc9ql0RtJEI6TVb5If7NvHE1A==",
+        "shasum": "a5607119126d2b3e44c7557808c89d4ad0db3ec8",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.5.tgz",
+        "fileCount": 10,
+        "unpackedSize": 33600,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdgkJPCRA9TVsSAnZWagAAGU0P/0P2FQ3ffnJZKg1odToS\n1xST9SBNHma8Bwo/r+ks5dQ1+bwaSZH1Fh+MUTcJQ+oJ+MAm06MBp7TS8xNd\n6jr3KyDiZbfA3HKTm9v/Ydbr9EtrocrG0CrZLiAspGWPmtM7Ly7MsBomsScl\nYipludlBltTho3e4TjkNPN0MRe5prJ/wCoYrwm+i3jPwMMIMwR4O3EkxGKXl\nnEjfGP/SUrQzk/o29mCTfVJRrPzIyzdNn4x7c4lN6+JLwAF1On9AKp8Np1CJ\nHrEVmjXxdPEaRnM8sHLhp2GApbMFViEC7ZLLOINJ0qwqJNs0nm21IhrKU1JE\nb8L4aUj+gyXjmRpyEhIWjw7JghKBSy4FNEGcA/b6s/KWZAlQBWXrbr9FkuI4\nLvZguEp3pbBJLE9VPterFN4WblN7hXVqDFwK87zxDVhi8PQ5mT4u3c1qwNHE\n5RCyOd7+CADkI1ogEThAKu94Hw4y3dQObT11yJ2E56MOguFtUnQF4tNMHMRU\nhzpNlAiyr4bpf608KkoAOgpcYnH8cHdzcJgve8jBN/G+gpSZEnDt/kwkks74\nfrtfCIyOVZsG1F6v3SR7hwDY7fKpxH3FYHVBVnU02VW3inBtbVtLwBbaXa+v\nny6i9BVYaScWkBVWgbt5Ag51+wJjU5onGGI1HUTRIx6mpZiRI2gT0IG+nfaZ\ndZK/\r\n=5kpo\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.5_1568817742605_0.5958188829651632"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.6": {
+      "name": "sass-formatter",
+      "version": "0.0.6",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "0.0.4"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "5206440aec36742d7e2db9b2a6d08c2e11398fee",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.0.6",
+      "_npmVersion": "6.4.1",
+      "_nodeVersion": "10.15.3",
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "dist": {
+        "integrity": "sha512-PAG91FQ1MuWyvPPvdoDig4nGQG4GnvGIoTl3MH6HxlVs+ILUSjkYhi9c7Nwpj89XOBSfkYOpUZ3bNxrZRPn9vw==",
+        "shasum": "9f93c1fcd8b1621c4925a20f80c319a51175a59a",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.6.tgz",
+        "fileCount": 10,
+        "unpackedSize": 33606,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdiz6HCRA9TVsSAnZWagAAyxAP/3pcYJ2jidbe85Hxb5np\n62bZEZ/aOyOGTLUUKPEPFeK1nxZM24SpHvLdIVGoY0fzlP1A0fs666il6vfA\nZ+eAMWElq8q5utva3AaJsOUCc4TSEVK79vwNtr7bas6QnwjgenDD4eckUrvQ\nbP/2yXHCUBqYxCuHtyx2/J4QJ9OM/tfXx2xX3pdqKDqM915jVVOOX7ALKxnT\nm4VtBbzNXYuWIH7U21wp01vC4Prv6OTfhoGZLGRqkXUaJRGG0uhELV04D4Lq\nTXHx7qNMmU3LIeAtCufl8+yKWze7mDVXX15z9Yw/OMTxEgQ/IGv1FI6w/sua\ny3gGzRvKitEuTzC/4tygeXFluKgEc4pulXIXSxqg7s/kh86z6spiLT8/81Yo\nFT9I0TbAl0nf6V3sxvtYol6dRL8JUCv3cPWCg26cIPkneedup+sXSpd4FIA4\nojZhUzQJqg4LvHfoTCUWO/WuAFnpMfsRSTx4iwl1DpwMHUGgwNKp0aXfJNRA\nW8TyqT6fdPSMQkz1tF1kybETJUlC6WuMSJZ1dBXCo8+j5vF/PBBq1d0HVvVn\nBmaFlmlKPYS0iidoWf3M7Y2iRmXxjvZ5Bp77rYvo+0DWfH+dZfh5GQM0+nAF\nfMwiFp1rmbuNE7oHRYiBAlFMauvkrX3qrLZuQp9dbV8QvFXVnWxaAuo0Ez3R\nvuui\r\n=VdBI\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.6_1569406599306_0.7558898400295382"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.7": {
+      "name": "sass-formatter",
+      "version": "0.0.7",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "^0.0.5"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "4d30a742c1cd9b151bf901d42927f09d743f9a44",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.0.7",
+      "_nodeVersion": "10.16.3",
+      "_npmVersion": "6.11.3",
+      "dist": {
+        "integrity": "sha512-LzhCao+e8ZvckaqXQZZA7i21f5W2Pdq8MBREhUFlOfL/pj6zQgghCYEY7lBc/60z2TWZ2g6cuGp15TESR3/mrw==",
+        "shasum": "d1aeb466c4804875e519fb924563211111dcf86d",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.7.tgz",
+        "fileCount": 12,
+        "unpackedSize": 34380,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdljLRCRA9TVsSAnZWagAAkh4QAI5+k7CTaiAatLGY7bXf\nfnc3J8BTFDHMA6jNK5v1DAYRD8RHIzRjvsYE5LaRXgy8GNovxWa6m5Xjax/C\n+iDE2ZCaEOtrvEEf6PdfJeP9Vzhw1bxXcQ1OrnVqv/UYDYysqGe+alTZZCqU\nvOsz9cWeAxhOl4bQRCx0Eq4+FGPL36Anp/tRKB5M8DXQc7sl2lktkCoKxvY5\n9uSVNPHZWIrsXeu5+OMg5djgYOdlLu0kGDMY5OvWd+/mKp9xXfNSNwBkdvrL\n3cSupDOx3EZHQnGcS9q29JQRSzoR9gE6Mk/dUM0eVPFx7f4tqUNX3sVYkV9w\nPgQCnC326kWaDn5IHJ0ENG2Bt8xM0cCXxv4+wlUa5Wnfx3aa7kmos4d4Voe7\n671yzH8yS4/UtLmc10drsfUnvES1uv/GwEIUYeTWIOwSQBcaViWk2XSR+UJw\nCofWULMA3V0sC/kljZL9dP/ORl5kXDQz/vbUPUssx8nE7z1f0XH2YRt2XbQq\nU3E6RN6uiQXLVRT+7SMjV/FR6MkiWKumt+I9a/KiMvhArvjZdDNAFOkrw0SI\nS6MwwlQi0BM7aeVguWujixQGQyBLltVOPrPo14qiSFQr/+6035NGbBrPtQhS\n4mp1CXwBUtH3yHQBiKZkChhXaWGDEvuOD6h/4cQuKUaa3g3pEHgryNnUq4ra\nCZov\r\n=C+Ag\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.7_1570124496549_0.6645419964506962"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.8": {
+      "name": "sass-formatter",
+      "version": "0.0.8",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "^0.0.7"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "aaebb0029606e6a0d722ff55445059e25f48f0fe",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.0.8",
+      "_nodeVersion": "10.16.3",
+      "_npmVersion": "6.11.3",
+      "dist": {
+        "integrity": "sha512-hnoWaIMMnqjVW3bEMv3cL6pjaMvsXK6TRBZpbvjH6cTas8s/WIjEUNGr7cHiLUeFgjMjbPtEApUuCXoZky0w5A==",
+        "shasum": "951c13ed981634a48acc319687e317a53edd19b3",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.8.tgz",
+        "fileCount": 12,
+        "unpackedSize": 34417,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdnJ9wCRA9TVsSAnZWagAA1sEQAIMFPNvmG+nTnlB5udFf\nSTUWGXmPprRIVEdS+FyKi0gggYZk5C3GAYR3InGpW0kpft7WTaqh2CFnxiUq\nkPFuuF7ZIHU/Q9M21YPZB21agQI8Tr/vQERSS25N4gLQnnoIhXFzA7ZrC29U\nh/AsQLugNJ1S9Bdb4JsMgSUufTvxdIg2HqsVawObJiOzSc95bF5ZHrqpKMn0\nmhu7vfpARj3xJgIMTH/l1/yxh7lmFIGJpemGjh9bRA8lA+4/NA3KFHltdsqC\n4JlFXp2OP+4Mj1ww0btpvvmKDlCk+A2jNRooVlLy+z65ayfS8gLbvMwgT0sN\niR2H3mRJ2hXUAxLeqEQ1yKOJ+nfKQpiB1535MvldvwIxz6t2S7AnNhzts12K\ntVBYs8IFw8zecinBufpGLzBzTSFPyoyu6ukT6Aw6J4XOIREmZRrxO23yBq3V\nh+AYnmt8vxmoxV5EQO98pH/wCLs2tsF0GoUptGPMeVmLTsOJ4HunIgbo/Doe\n/+KBEwiCSjC3bHnf8RpUVSl+R3UfZ9G6VoNlHzE8HJuurudcQE8g5sDuygga\n/lYv+JsSXXC6a9FihjoqaLOnbdCOmlDJsbmKzOEMf6ITl182m+ZqvvLQRmpI\nVzHVeZAQfELGu9RKYra/Gy6joZ4LDFqCziH0KKBca/1TQBUMHjUcPMNKSfGP\n0bK/\r\n=pGs9\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.8_1570545519841_0.9564703830632444"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.0.9": {
+      "name": "sass-formatter",
+      "version": "0.0.9",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "0.0.8"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "142e7674f481d691d2d56ced3e0dcf288f63b2b3",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.0.9",
+      "_nodeVersion": "10.17.0",
+      "_npmVersion": "6.13.0",
+      "dist": {
+        "integrity": "sha512-ZY+h13eRVeH6OhTn3rDW51F4zXgaIOpSUi6xsgPcStu+46V6KSKzFoxOmfk6t1aDJE0BlF2VR8mTsPPeXnc3Aw==",
+        "shasum": "e4890f651da155fb1eaefeb2ce685d540aafc3e0",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.0.9.tgz",
+        "fileCount": 12,
+        "unpackedSize": 34272,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd0vSuCRA9TVsSAnZWagAAKEgP/R6LGCfXKWB8oWITJhkh\nvG20Dum5qcxgvIS3N404xBhKd82xiMjNbw7I5WFwtxdtDxDfP/l58/13HMth\n6yxN+JksvdyIbYt4b1fFjwMR5vKukjSHJxCG3Hof/NI0uFhYQrEReDH/t59h\nNnM4/B6HfQc4aW5Bm4YjLMkjNJJJ9uLHWAC8MI0kKSbifXL3N4DcEHmW2cBB\nChefH4WRkcslws9RoD8EMoL/fxm7ngCPUkaAbmwK2+D4+DpNwvjwf90R/gvv\nbleTvEbj+MEVfAyGNmODFFDwdBn4fiF/2JWm4wP/ur30je+YkbJZ680vdo1m\nToKwxNLvC2oe9yLXM46gcDLLV06ttaTTbHBbsZwUphLSvD/cOpxCnRPRRUqt\nYDeW3mfMNN2MGzMdXaWQJu/rqLjKzO/AwT2NJ/TOLsgUHqTjhLnaWhzCSpex\nxrqIQtezWGuV6TkZ6LVb82leLq2JZoVUCw06BBQadIZUZfsd9fx/LxTNDLGj\nBl+Yajy2eWqX3EvSOyG47nWEETZwkzA5VLg6BI7BQGr30w1Y6sx3WZkqHgPV\nrCgTd9QekgJvnE37lJOkBT8fcNiq25fWbUBTJ1FPn/7xqnJuI2sDy576Bxl/\nMViCg9ZBkHauqHCjXpEINsRfbfSwkSgyxT+xMMX3pa3Z07nqv2P0VDn63w/d\nyHhV\r\n=v5mV\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.0.9_1574106286168_0.41005560564973464"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.1.0": {
+      "name": "sass-formatter",
+      "version": "0.1.0",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0"
+      },
+      "dependencies": {
+        "suf-regex": "0.0.8"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "cff0a758411c0fe8510f479cf6ad4e08ee357e44",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.1.0",
+      "_nodeVersion": "10.17.0",
+      "_npmVersion": "6.13.1",
+      "dist": {
+        "integrity": "sha512-Y8YnVFhR4YGsutV+QG9u+pBhaJmOjd2fNye5nZT5zZnr3Nyh8WWCC1u6EAGIbuH6Hgpa/jjbsvqybYll0S5j8Q==",
+        "shasum": "5b9fab45ca79ddeeb8bc5e17c079806445e7e1a2",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.1.0.tgz",
+        "fileCount": 18,
+        "unpackedSize": 35792,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd1qqmCRA9TVsSAnZWagAAr5QP/RiBsYzBD6Bjc3s1eVZ1\nFrwjd5B9gtDneVrhrtBSPwXvgmCAzm25o/FrHwEsLCFcw7qdCPOlR/EnZrVZ\n2/x6g0bX8ATxJoblJqqd83CzEoBsHOu97KNBqIrfBx5QcmbhUUmiCl+TWzaV\n7Wxu/ZZvG0WktrE+sEynve7JDiKq+KsFN12kIMwY5iCxM9D88E8/mneJUuIl\nrZDZSGCbvnnXby0U2Jk8tUEBlulbYBtqz39ub4pp5YSqT2j+wdFt+c34rRa+\na9qgv0Arcabey//KvviRn7MDBmKKcF576uhI++KeGGLLEgnDRGxI28WK04yk\nbwyJuYB6uerSE+YyKF0ASXUJDhUYju12nW1LGvziDfUSyt3AISuV8Wn1rWO9\nyUJgXKqk23sugKTgEq12r18OFlwX8Y2LXZJ9yZQyqTJt7k2f3QsUgxTrqxnt\ngVlRBXp6P0Necj/aSFJ1pF1RtUIQycN+mb84PM/AqrriN8z+EHJlNMpetOGN\nhHiagfIx89wzbA5dry0DC70we5CtkjBNDesc2sDqoknt+sQdiH9SwfjoDyoi\n80LzIURCnwB3WxY8z4brex+cOIG96Q5FX5QGRF3s9W9bugeaembmzX5NHEeR\nHO44NsX0joX2+lp/W5jrBZmeBX1BORpm2jichMm8f+ZVta/hxAFaxAdrKa6m\nAyaW\r\n=kRQu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.1.0_1574349478157_0.7077490825350246"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.1.1": {
+      "name": "sass-formatter",
+      "version": "0.1.1",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build",
+        "build": "tdg --include 'provider' && tsc -b",
+        "watch": "tsc -w",
+        "test": "jest"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "typescript": "^3.6.3",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0",
+        "ts-doc-gen": "^0.2.0"
+      },
+      "dependencies": {
+        "suf-regex": "0.0.8"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "50f70cb93796d7bf01f91966eb7dc1b52e7c5937",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.1.1",
+      "_nodeVersion": "10.17.0",
+      "_npmVersion": "6.13.1",
+      "dist": {
+        "integrity": "sha512-xUM4qrPKP18LAt09RCbNZSfqy7+HCxXaZUTQxkwJ2ri1piOr/PYRzHkTtNan0M9lCAWhf0trQOi/GCJjqcMO+Q==",
+        "shasum": "dc0bcaf7a2abc6682d3f8270b80474f1e488db17",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.1.1.tgz",
+        "fileCount": 20,
+        "unpackedSize": 38974,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd2TcrCRA9TVsSAnZWagAA3BEP/RzQm9EuFF3+S2a3W8a8\ny98D3zfhrwFyKO7wUWEZ4/ngufjYePVg48c/vCfbMx+OPvU+KCf8DMYG8BQg\nXf0fUDNYg8Z5hpF207IC23T4ooP3DBY0lqO4aocjl411nSbnL+tC9BvcI7nA\nQ19wkLX/uj+c/3Zk6DyIf5yOlN9SVsjQD30RzoSzOkDUGeqDfzLddtERpCFf\nhEAy/GvNxuR/zeBwZZr3g+IAfGEFcS6eBtIstH83tAXvTHHYxQfH2MK98DPe\nwuAzg69jp84zpA/YRcynL4OyFRWM40zviNCFpcvchwGqSn9kjEfki3ze9R6L\n9xsW0UcQXjztFp75hFzcz+QOIIC4UbwMortBlvhGfEfeSh2GAxZRBKfpThES\nveYwd7tWtlucSevIWv8mBHY1oKDc2E+isTe250LjTYxlkOAwNU3soP/SQ7dr\nwfzZfGSTcS5KMpj3CP0IMQZV7IVVVw8TamTY8rXiri4osbNkgauNQmuFZfFG\ndbaJ1nlZT9XKHeffXNN5q0h/q0R/48et4vyq9JVvTYCDvGk25iidp2Q6oDQl\nMIFIY1PR8lprzsv2zWtGqnsJhxD1lKsLEH+qF4Aytf1FW4YA85nTMIWpOdSP\nXovRsoulNXxaQCtDm4Qq61ExX4ejjJGYMjrlfYqqAJ65Oi47IlAh79Lmz16H\naIiL\r\n=0tcS\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.1.1_1574516523378_0.22940919248069358"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.2.0": {
+      "name": "sass-formatter",
+      "version": "0.2.0",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && npm run build && npm run generate:badges && npm run generate:docs",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest",
+        "generate:docs": "tdg --include 'provider'",
+        "generate:badges": "get-badges"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "get-badges": "^0.1.0",
+        "jest": "^24.9.0",
+        "ts-doc-gen": "^0.2.0",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "suf-regex": "^0.0.9"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "eb32221a1b8d718daa0346a9506f2af9a99b12e8",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.2.0",
+      "_nodeVersion": "10.17.0",
+      "_npmVersion": "6.13.0",
+      "dist": {
+        "integrity": "sha512-//n0f3zzdS2g1tqUTvtkXHoOdEPNiQ27kFwZ5cbfgpZPLUo5483qi9YgUcCPLoO+wirsR+d7g9zQJp5IrRE2jA==",
+        "shasum": "83f1b5392cb4dad81d06e808fe3c5c1e1641d417",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.2.0.tgz",
+        "fileCount": 20,
+        "unpackedSize": 39450,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd3SNhCRA9TVsSAnZWagAAuBMQAKC4R410pD2WTM5LvX91\nJqTIhDjAlwXf9SEz4hxMzdzx1k2k9KcC3+RZ731W8cvPxPP2zq1bI++UVLU7\nUBm7oNKNS3+wyPGxCK1KA9+D+4UvYlBIAIOsrysEqqFnednYx/UJqQErg1Qq\n1IvcqKqWUuQ28S5I2zO9Luk1fz+9Z36lqvqVO8RlbYHGxRwoe4l8ao8ThAP2\nyQxf7kdH1heRVouxrMoiH1VLvkSHl2/LkzaQoBnU29ADFOF9wMw5G+5VHvNt\neo9DI9dhiZqqKhWrGQpWlxyM04GJlH33/gmo3OOJScn2ARz8ZmpvAA5sW70g\npx2DoUt28l2il5PRfShcqs32Da3elBFoE8MuhkPQ/YMyA5EaHd9YuKnYuML1\n+YesfwDiO4M6ca0wjWTJtXCDyg5goO9PbSVuJGV/e02yMXzPoI/P8ZYN5GFX\nmblCx83dg8VOIGPqVFDDfXl01PZCLI48qsmGE5oF9JbP4aK64yq1sR7TWYDx\nDYma+ov5BwM/KmLubkB1kujhIxfKEB/PE/V6KIg++wFak/tmxgseHnhaIpLl\niZEG4uclMEIS34wxw9lmmPVhM+HoublGvFDT3Dqp/cw5ff1LGwG5cRL5KoZW\n+9FPXkFTY8e7xEH+f9rCOYejoo7gqirS+MezA5RFCVRd1D1vFEUkqkvSyUhP\nnran\r\n=B25p\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.2.0_1574773601522_0.937131631698868"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.4.0": {
+      "name": "sass-formatter",
+      "version": "0.4.0",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && del ./dist && npm run build && npm run generate:badges && npm run generate:docs",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch --coverage",
+        "generate:docs": "tdg --include 'index'",
+        "generate:badges": "get-badges"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "get-badges": "^0.1.0",
+        "jest": "^24.9.0",
+        "ts-doc-gen": "^0.2.0",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0",
+        "del-cli": "^3.0.0",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "@sorg/log": "^1.0.3",
+        "suf-regex": "0.0.14"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/src/logger.ts",
+          "/node_modules/"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "88dd977062adf814590bd269a5cf6fdfdf46cfca",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.4.0",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-qjy7rInZjtpbPl1CYWyhlIsCL2rzWeoLtM4DsDCOJbCqqqtVlkoYM/+arMEawdHHyjCPHtJ9cTGv15DUUst0vg==",
+        "shasum": "fbebc9e9665b734fff48cfa8c81450d1eacb1f90",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.4.0.tgz",
+        "fileCount": 23,
+        "unpackedSize": 48669,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeBd0SCRA9TVsSAnZWagAAcPcP/RUjeMEyFLrfxfBj839z\n/6h3CZZE4/fgY//Gt18VyJlOgH0ewfnAn9kUorstMsfARca9TnWzeWxw/HpZ\nJFJINFA2rLhlaGOXHzzYlhy4BczHRiaezyiXmekesJb/ieT/r2DHAU3IwWOk\nMO5RVPTRob14oo8UvZIpSpJ4Nn93leuMj5MiqtSpzV9ASucydwaz3Z/8Ofer\nAr3aHnR2Sd5/6canHfQhWrWaBF38Oncwv1HMM/Eu5HDUFxyarePlPdjOhlTe\ngP1TYeexXLXWksGEHuV5fCnw8Boym9fXb2RMrOfLzI+mo6b8N/5DwsJt5TJp\nhgXxKeZJxrIpZ+KEGYPqJ8ul81T79kuKxUnehGL6S/enGgrhNhFMNxtUqCHS\nGznWb7OsRClwvFn6o1NSjXBVOzKMNmxjOu+Hk+t1Kc/LbCJ1ZiqfvJ17m6yd\nrGmNyiRwjfbTStZxvuBjV532UFe4+IJNd8snTwBJfEr0Jt1TKe0iVxXy3mmC\n1Nw5CFnXy2pp11kfCbF5V/YmgHNj7eT4Meb2dJe6vuB698L1Q3hIRk1pZsK4\nfkatVgmmvmUHTcXgQesykcRtW2FO/U2WYj/ZvL4Zf8etuSmummftQ0U8fDnx\nOMDuME0sY1DFPOXKAXwvy7SpEZwOCQIv+QI3yy+meLr8lDdB91d9F79aSF7w\n4uVP\r\n=txc8\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.4.0_1577442578116_0.40539325523209624"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.4.1": {
+      "name": "sass-formatter",
+      "version": "0.4.1",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && del ./dist && npm run build && suf",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch --coverage"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "del-cli": "^3.0.0",
+        "jest": "^24.9.0",
+        "suf-cli": "^0.1.0",
+        "ts-jest": "^24.1.0",
+        "tslib": "^1.10.0",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "@sorg/log": "^1.0.3",
+        "suf-regex": "0.0.14"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/src/logger.ts",
+          "/node_modules/"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "f420036ea24caa0efd7c81f566c0f805e05d0d9e",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.4.1",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-9NHYWLWM9l6HE/vdKYGj7xKgTwmitbjeTA4l0GNVz40O3EndEocF4kPLCir2C8GRvYZbb1qUrr+CJ0sw7OwQNA==",
+        "shasum": "27b20251c24a0929c8d074960abe0fc06edebc95",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.4.1.tgz",
+        "fileCount": 25,
+        "unpackedSize": 48617,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeIcxtCRA9TVsSAnZWagAAr0gP/3dtwQy7qJZHqLoICOuo\naFPI0qKi44os9i43JOewbm52NKM5RiceUhyvLr9kDHWsNhZfWnN2Jf0+Y0ih\nApnV01eaga3ZPK+W8fPF1wQKIswe8fkvyAoETWVQJ0Ll/somJSFVGLLVMTy+\nopbMLSaOichiQ/G/oIK56Ifg8zGOSVMi3deR3Wl0MTY1z770YBh4Va2FRj6P\nzQu8SPIo31sX6dSqOcdm3+mIiF1Xjl+RPjEAWecijgoZKF4lRmzY3kcl4Ozn\nf5k+YlhyWEXsCcmAfB3K7Ac8vxLLHbPmFY+FFiplDy8NnbnOYan+8qaVIZPn\nBN/YqrloBMwU+zXcKMkB9E91rReu/9zG/0K6K64I/K5tVIEAyz9TlCjKG13x\nTYxpB49ZTpMYOKT/HuLXFtO/8IQyL6DvFlcaLCCYwuq6Hl7txCB0LUtTyu3y\nK7fMqbWidALTsZQPHnV9nKjsM0pj/KQVSaGXA0uO/9mcJPdAbTAMh3buRwAS\nsy0yYbfn7lEHpCz9tijY5yzx6A10PgVBS7l0NjtlVizRnm/lPLHte66e+OLd\nijIPwUv4viqiPIOGvt3qFG0D/zMO2LvgFEumCdgbFkAju+AuFURHrbY0Dyzb\nH74+Dds6RGGJBPNrKLpeY7dLmpdCIWa8Jwvg1Up4fbGRGrICom1KX2196aGw\nluM1\r\n=S4i7\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.4.1_1579273325068_0.49649203995887037"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.4.2": {
+      "name": "sass-formatter",
+      "version": "0.4.2",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && del ./dist && npm run build && suf",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch --coverage"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "del-cli": "^3.0.0",
+        "jest": "^24.9.0",
+        "suf-cli": "^0.1.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "tslib": "^1.10.0",
+        "@sorg/log": "^1.0.3",
+        "suf-regex": "0.0.14"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/src/logger.ts",
+          "/node_modules/"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "bc9be61dcf2131c065295a0e7df3a9c6180c018f",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.4.2",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-xpsELuv+T1CAaqo+ugC7nxTWTNZ6ZJ1vmRMnZ2pcS0mOqY6tlKC4SlW0zgPMKjWfxcS+l0ippnbDzPsEF4j92A==",
+        "shasum": "6132ffbed671812392ed1856bb055dae45d3b476",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.4.2.tgz",
+        "fileCount": 27,
+        "unpackedSize": 48886,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeJIWmCRA9TVsSAnZWagAAlgYP/iDGCkjTPIlAQulYCW4r\n/ja7R6PTxV52n6jsvKG/3oFs2rrRW+8A528fm+GM1cOYXay8ZmEqyNbOhCKQ\n0sNxEpAWO6y+OwgEQyJ8r/1vwkkXSL6O+o0VCAjx1SkdHP7kFVbPQfHSalVB\nhaneDQuiM83G+fqvFP7/sJFcKfREH+BjIZbgFmeMpLG94H1D3nNxApOJsqMK\naQ8gadPyTgtmJvPhJOKNkSfSercC2goyTL/lvf8ytUuOrpjnXYcZq8KXUwPD\nvnwNn6rvmtT5xxhMzDkpNddVPQhdLKfvEepqv4lSjuWLi7Ohk1faGJsRJbn7\nRsipRDeU8iqECGZmBuXG8N+5k+eq/5+VclYQyvbm+UTxwvcEykXcamOgmDGI\n5yu6gjGFx5meI8lnfR51QOBC/6+M3G9Yxstex+ia5VyP7Hweo1c+vrgDOZDJ\nGal1ilmZK3yz+d1t3vsKBiDnQ3ppCMNyzSNJMU58CJsmx360YseMynivY3zP\nHI/dqGyM14Nv1nWGWGqAYmsN5hfnrB6eXIq0BGgcjXh7mgHoktSwF+VLXlNZ\nb+U/U+ABOFjZWmkPIKJUMjZcZ+JSVKfNPTN3BCc/66Xp3eFOb/HU2KIXFx55\nWwi0oY6BI+wy6EzWgKWCLX09aneCd2RWMGJtozeVXJUpf6Bf2toPT58//01A\nm4cl\r\n=hkuF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.4.2_1579451814255_0.09294673025000266"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.4.3": {
+      "name": "sass-formatter",
+      "version": "0.4.3",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && del ./dist && npm run build && suf",
+        "prepublishOnly": "npm run test:performance:publish",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "watch:p": "npm run test:performance:dev",
+        "test": "jest --coverage",
+        "test:performance:dev": "nodemon --ignore './src/test/' src/test/performance/performance.check.ts",
+        "test:performance:publish": "ts-node src/test/performance/performance.check.ts PUBLISH",
+        "test:performance:gen-sass": "ts-node src/test/performance/performance.generateSass.ts",
+        "test:watch": "jest --watch --coverage"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "@types/ora": "^3.2.0",
+        "del-cli": "^3.0.0",
+        "jest": "^24.9.0",
+        "jest-store-log": "^1.0.0",
+        "known-css-properties": "^0.18.0",
+        "nodemon": "^2.0.2",
+        "ora": "^4.0.3",
+        "suf": "^1.0.1",
+        "suf-cli": "^0.1.0",
+        "ts-jest": "^24.1.0",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "@sorg/log": "^2.0.1",
+        "suf-regex": "0.0.14",
+        "tslib": "^1.10.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/src/logger.ts",
+          "/node_modules/"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "9f26affedb8e40b8a81098b2702784ab3e205300",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.4.3",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.13.6",
+      "dist": {
+        "integrity": "sha512-1gGFkLENDXRb5DgiKGrBX0DvWDL9pcNsPWPws40wUD9Ap18q2Nt8v4NeJXeuDvuqmuW0Kk29pTvjQvQSo0DAyw==",
+        "shasum": "c2d5b7352293f457254a99daab7b62b64a37a9b6",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.4.3.tgz",
+        "fileCount": 33,
+        "unpackedSize": 60306,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeNqEiCRA9TVsSAnZWagAAIVUP/0uVbTNc2vsUeMhfM4/Z\nFzfBqItllDw/Jgzgly8fGdJWpiTcBC8bDeW7/GaR2J1whEqC+R6P+WKDyBAW\nw6QyqytC87phtmlw7hyR2EMf5c/7OGydcUDt2VoqOreLmHGfCF6LmNkgFA8G\n7IfJmDPsJRcSKxUZiE0r+/RXT1qq2BopPVki07stXbq3+d+TgNjrg0ocqjDZ\n9TxMrpwsTDouAvjQp6hGIhl1tL4zFB+iNoHWzFGvjb4kem4Q+1vabWz7YbEb\ntHA12X8Pcks0ogQOTkLFCr7UiV2osWfDrzdMHqRav7wsrVdKQcAh83Cqb7QJ\nyEczztTNrS+OHOH+5jtAW0c8tAHy/SlKsq4usvs7wq/lT0qbjfRz0A3FrLQ3\nOu4lrj0fI6yma5D8Q9smWd/l7CprpPuet9zVaETvEcZPTpGPbKheHGP/h76A\ndiKQYw23AfZsEL/ntV64mc02sKDFTwCGCmgO1MslP65sj785EVw2Xh1Njj8h\nXhMiJVcvTgcFEm9DRKxDoEa9v3h7+QyoMwJoCzXQzbw50tB0vDw9KTd1Errz\nx6duv7ikIcgTibc8HDwdf4U6Moj3HUJ/ZBI/y0uHjDR92JqO88piP+e4+/B7\n3u/NznANjCVitUrDjvndGu4jAuG0NMgP5hHQvjIZLF8cAwqz1TJwzkP0o6rJ\n5IXB\r\n=10Tq\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.4.3_1580638497666_0.521657180274187"
+      },
+      "_hasShrinkwrap": false
+    },
+    "0.4.4": {
+      "name": "sass-formatter",
+      "version": "0.4.4",
+      "description": "typescript sass formatter",
+      "main": "dist/index.js",
+      "scripts": {
+        "prepack": "jest && del ./dist && npm run build && suf",
+        "prepublishOnly": "npm run test:performance:publish",
+        "build": "tsc -b",
+        "watch": "tsc -w",
+        "watch:p": "npm run test:performance:dev",
+        "test": "jest --coverage",
+        "test:performance:dev": "nodemon --ignore './src/test/' src/test/performance/performance.check.ts",
+        "test:performance:publish": "ts-node src/test/performance/performance.check.ts PUBLISH",
+        "test:performance:gen-sass": "ts-node src/test/performance/performance.generateSass.ts",
+        "test:watch": "jest --watch --coverage"
+      },
+      "keywords": [
+        "sass",
+        "formatter"
+      ],
+      "author": {
+        "name": "Syler"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "@types/ora": "^3.2.0",
+        "del-cli": "^3.0.0",
+        "jest": "^24.9.0",
+        "jest-store-log": "^1.0.0",
+        "known-css-properties": "^0.18.0",
+        "nodemon": "^2.0.2",
+        "ora": "^4.0.3",
+        "suf": "^1.0.1",
+        "suf-cli": "^0.1.0",
+        "ts-jest": "^24.1.0",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.6.3"
+      },
+      "dependencies": {
+        "@sorg/log": "^2.0.1",
+        "suf-regex": "0.0.14",
+        "tslib": "^1.10.0"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+      },
+      "jest": {
+        "moduleFileExtensions": [
+          "ts",
+          "tsx",
+          "js",
+          "json",
+          "jsx",
+          "node"
+        ],
+        "roots": [
+          "<rootDir>/src"
+        ],
+        "coveragePathIgnorePatterns": [
+          "<rootDir>/src/logger.ts",
+          "/node_modules/"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "ts-jest"
+        }
+      },
+      "gitHead": "4ba57453b7c82ee4b694c4ce323b3324dd712778",
+      "bugs": {
+        "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+      },
+      "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+      "_id": "sass-formatter@0.4.4",
+      "_nodeVersion": "12.13.1",
+      "_npmVersion": "6.13.7",
+      "dist": {
+        "integrity": "sha512-pI/2olF5F3AMkAXbn71nJK7yAsWfRYLlyp7Suhiy4hzuNga05XaUzLO74lplCpvS8GVeUdFgef+8lU5+cHr60g==",
+        "shasum": "e8533c05c0dce3aecc0bb796a658f5178f514a49",
+        "tarball": "https://registry.npmjs.org/sass-formatter/-/sass-formatter-0.4.4.tgz",
+        "fileCount": 27,
+        "unpackedSize": 49646,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJePSE3CRA9TVsSAnZWagAAnxoP/3j/3sd5EWXGPCZvBEqZ\nwN8thYj5EwFDiCPSGy+sRJGK9C9kfNSqZosIdzjB4f4CnltCFJV9t3juLqQA\n//7F+e2JtWXBShl9CIQN027scRZ7Vdx/s8mMTIQLFWpILtcK8b2FOnkF7QkW\ny4JWWujbq2rdk/w9JkPvPrmPRdkct1LPTe96PWRe1U6RfG6fuwvQA128U/L0\nNLhqJctZx/XzGRtPEbdX3eZNbRrxDc9cqXed5bMHiVYru32WlXuv4b4wuSt/\nBG5nCYHLhk6BvMv6TJu2Vs510xPPpU5dfUwLc01WYyCKlrEMgIY14NdlTiUu\nZA/+vHQXkCwsmDqzkPDC2MZSaEKV1TA7jfKnzlmJFiVmXYV97ARNEvHfLuoS\nE4GRIhiIWdVEntWWAGzxJNd9PuFeP1pv6iffIuEfTL7Zex51r0ahjvVjsZc/\nWLWaHCQNmA82BvekFFf85QHxQg7QCpxdWVJyRVjU7zpKVEfcrdwcTtmYhOGj\nl4e3NQV5WW9L6JZmtj+W7Qvk4jL3/8empiglCubYjSPHOWZvc/fF4tZQbUyX\niKHzwUh9Dmt2wRAz/RPY5bQlZ7+VrXfeZ92QB7Xca0Hyoksk2T1d/20+XuZJ\nN8LUrnx3VXNcr75R2Us0BdQEyGEowYOlrl+hzGRIR484iitpW2KbHS0YVKDW\n3S2v\r\n=O/6/\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "maintainers": [
+        {
+          "name": "the_real_syler",
+          "email": "hileo77@gmail.com"
+        }
+      ],
+      "_npmUser": {
+        "name": "the_real_syler",
+        "email": "hileo77@gmail.com"
+      },
+      "directories": {},
+      "_npmOperationalInternal": {
+        "host": "s3://npm-registry-packages",
+        "tmp": "tmp/sass-formatter_0.4.4_1581064503298_0.18384271801821406"
+      },
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2019-09-16T12:38:19.557Z",
+    "0.0.1": "2019-09-16T12:38:19.673Z",
+    "modified": "2020-02-07T08:35:05.792Z",
+    "0.0.2": "2019-09-16T13:30:52.850Z",
+    "0.0.3": "2019-09-16T14:43:31.372Z",
+    "0.0.4": "2019-09-18T08:00:49.825Z",
+    "0.0.5": "2019-09-18T14:42:22.786Z",
+    "0.0.6": "2019-09-25T10:16:39.495Z",
+    "0.0.7": "2019-10-03T17:41:36.651Z",
+    "0.0.8": "2019-10-08T14:38:39.970Z",
+    "0.0.9": "2019-11-18T19:44:46.253Z",
+    "0.1.0": "2019-11-21T15:17:58.295Z",
+    "0.1.1": "2019-11-23T13:42:03.528Z",
+    "0.2.0": "2019-11-26T13:06:41.664Z",
+    "0.4.0": "2019-12-27T10:29:38.263Z",
+    "0.4.1": "2020-01-17T15:02:05.265Z",
+    "0.4.2": "2020-01-19T16:36:54.362Z",
+    "0.4.3": "2020-02-02T10:14:57.803Z",
+    "0.4.4": "2020-02-07T08:35:03.445Z"
+  },
+  "maintainers": [
+    {
+      "name": "the_real_syler",
+      "email": "hileo77@gmail.com"
+    }
+  ],
+  "description": "typescript sass formatter",
+  "keywords": [
+    "sass",
+    "formatter"
+  ],
+  "author": {
+    "name": "Syler"
+  },
+  "license": "MIT",
+  "readme": "### Sass Formatter\n\n<span id=\"BADGE_GENERATION_MARKER_0\"></span>\n[![Custom](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![Custom](https://www.codefactor.io/repository/github/therealsyler/sass-formatter/badge)](https://www.codefactor.io/repository/github/therealsyler/sass-formatter) [![Custom](https://codecov.io/gh/TheRealSyler/sass-formatter/branch/master/graph/badge.svg)](https://codecov.io/gh/TheRealSyler/sass-formatter) [![circleci](https://img.shields.io/circleci/build/github/TheRealSyler/sass-formatter)](https://app.circleci.com/github/TheRealSyler/sass-formatter/pipelines) [![npmV](https://img.shields.io/npm/v/sass-formatter?color=green)](https://www.npmjs.com/package/sass-formatter) [![min](https://img.shields.io/bundlephobia/min/sass-formatter)](https://bundlephobia.com/result?p=sass-formatter) [![install](https://badgen.net/packagephobia/install/sass-formatter)](https://packagephobia.now.sh/result?p=sass-formatter) [![githubLastCommit](https://img.shields.io/github/last-commit/TheRealSyler/sass-formatter)](https://github.com/TheRealSyler/sass-formatter)\n<span id=\"BADGE_GENERATION_MARKER_1\"></span>\n\n## Usage\n\n```typescript\nimport { SassFormatter } from 'sass-formatter';\n\nconst result = SassFormatter.Format(\n  `\n    span\n      color: none\n\n      @for $i from 0 through 2\n         \n          &:nth-child(#{$i})\n              color: none\n          @each $author in $list\n              .photo-#{$author}\n                background: image-url(\"avatars/#{$author}.png\") no-repeat\n\n    @while $types > 0\n          .while-#{$types}\n width: $type-width + $types`\n);\n```\n\n#### Result\n\n```sass\nspan\n  color: none\n\n  @for $i from 0 through 2\n\n    &:nth-child(#{$i})\n      color: none\n      @each $author in $list\n        .photo-#{$author}\n          background: image-url(\"avatars/#{$author}.png\") no-repeat\n\n    @while $types > 0\n      .while-#{$types}\n        width: $type-width + $types\n```\n\n<span id=\"DOC_GENERATION_MARKER_0\"></span>\n\n# Docs\n\n- **[config](#config)**\n\n  - [SassFormatterConfig](#sassformatterconfig)\n\n### config\n\n##### SassFormatterConfig\n\n```typescript\ninterface SassFormatterConfig {\n    /**Enable debug messages */\n    debug: boolean;\n    /**delete rows that are empty. */\n    deleteEmptyRows: boolean;\n    /**Delete trailing whitespace.*/\n    deleteWhitespace: boolean;\n    /**Convert css or scss to sass */\n    convert: boolean;\n    /**set the space after the colon of a property to one.*/\n    setPropertySpace: boolean;\n    tabSize: number;\n    /**insert spaces or tabs. */\n    insertSpaces: boolean;\n}\n```\n\n_Generated with_ **[suf-cli](https://www.npmjs.com/package/suf-cli)**\n<span id=\"DOC_GENERATION_MARKER_1\"></span>\n\n## License\n\n<span id=\"LICENSE_GENERATION_MARKER_0\"></span>\nCopyright (c) 2019 Leonard Grosoli Licensed under the MIT license.\n<span id=\"LICENSE_GENERATION_MARKER_1\"></span>\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/TheRealSyler/sass-formatter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRealSyler/sass-formatter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRealSyler/sass-formatter/issues"
+  }
+}

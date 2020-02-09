@@ -1,3 +1,13 @@
+export async function getData(url: string, replace = true) {
+  try {
+    const data = await (await fetch(url)).text();
+    return JSON.parse(replace ? data.replace(/"[\t ]*\/\/.*?$/gm, '"') : data);
+  } catch (err) {
+    console.log(`${url}: \n`, err);
+    process.exit(1);
+  }
+}
+
 export async function ensureLatestFormatterIsLoaded() {
   if (window.latestFormatter === undefined) {
     await Timeout(100);

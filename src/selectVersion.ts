@@ -1,13 +1,7 @@
-import { npmRegistry } from './interfaces';
-
-import { setLoadedAllFormatters, setCurrentFormatter } from './index';
-import { ensureAllFormattersAreLoaded } from './utils';
+import { setCurrentFormatter } from './index';
 
 export async function InitFormatterVersionSelection() {
-  const registry: npmRegistry = await (await fetch('http://localhost:4040/cdn/registry')).json();
-
-  await ensureAllFormattersAreLoaded();
-  setLoadedAllFormatters(true);
+  const registry = await import('../files/sass-formatter-registry.json');
 
   const versionSelector = document.getElementById('formatter-versions')! as HTMLSelectElement;
   versionSelector.disabled = false;

@@ -5,11 +5,12 @@ import { wireTmGrammars } from 'monaco-editor-textmate';
 import { loadWASM } from 'onigasm';
 import { InitFormatterVersionSelection } from './selectVersion';
 import { ensureLatestFormatterIsLoaded, initialEditorValue } from './utils';
+import { getGrammar } from './grammar';
+import { getTheme } from './theme';
+import { formatters } from '../npm_packages/sass-formatter/superGlue';
 
-let loadedAllFormatters = false;
 let currentFormatter: string | null = null;
 
-export const setLoadedAllFormatters = (v: boolean) => (loadedAllFormatters = v);
 export const setCurrentFormatter = (v: string) => (currentFormatter = v);
 
 InitFormatterVersionSelection();
@@ -17,16 +18,13 @@ InitFormatterVersionSelection();
 (async () => {
   await loadWASM(require('onigasm/lib/onigasm.wasm'));
 
-  monaco.editor.defineTheme(
-    'dark',
-    await (await fetch('http://localhost:4040/themes/dark-plus')).json()
-  );
+  monaco.editor.defineTheme('dark', await getTheme('dark+'));
 
   monaco.languages.register({ id: 'sass' });
   const registry = new Registry({
     getGrammarDefinition: async () => ({
       format: 'json',
-      content: await (await fetch('http://localhost:4040/grammars/sass')).json()
+      content: await getGrammar('sass')
     })
   });
 
@@ -63,11 +61,9 @@ InitFormatterVersionSelection();
       e.preventDefault();
       e.stopPropagation();
       let value = '';
-      if (loadedAllFormatters) {
-        value = window.formatters[currentFormatter!](editor.getValue());
-      } else {
-        value = window.latestFormatter(editor.getValue());
-      }
+
+      value = formatters[currentFormatter!](editor.getValue());
+
       const model = editor.getModel()!;
       const lineCount = model?.getLineCount();
       const lastCol = model?.getLineMaxColumn(lineCount);
