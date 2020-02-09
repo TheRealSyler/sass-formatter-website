@@ -40,7 +40,7 @@ const config: webpack.Configuration = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: resolve(__dirname, 'dist')
+    path: resolve(__dirname, 'docs')
   },
 
   plugins: [
