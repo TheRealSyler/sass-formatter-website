@@ -4,7 +4,7 @@ import { wireTmGrammars } from 'monaco-editor-textmate';
 
 import { loadWASM } from 'onigasm';
 import { InitFormatterVersionSelection } from './selectVersion';
-import { ensureLatestFormatterIsLoaded, initialEditorValue } from './utils';
+import { initialEditorValue } from './utils';
 import { getGrammar } from './grammar';
 import { getTheme } from './theme';
 import { formatters } from '../npm_packages/sass-formatter/superGlue';
@@ -53,8 +53,6 @@ InitFormatterVersionSelection();
   window.addEventListener('resize', () => {
     editor.layout();
   });
-
-  await ensureLatestFormatterIsLoaded();
 
   window.addEventListener('keydown', e => {
     if (e.key.toLowerCase() === 's' && e.ctrlKey) {

@@ -2,6 +2,7 @@ import { resolve } from 'path';
 import webpack = require('webpack');
 import MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 import HtmlWebpackPlugin = require('html-webpack-plugin');
+
 // import BAP = require('webpack-bundle-analyzer');
 
 const config: webpack.Configuration = {
@@ -20,7 +21,7 @@ const config: webpack.Configuration = {
         use: ['style-loader', 'css-loader']
       },
       {
-        test: /\.ttf$/,
+        test: /\.ttf$|\.png$/,
         use: ['file-loader']
       },
       {
@@ -47,9 +48,10 @@ const config: webpack.Configuration = {
     // new BAP.BundleAnalyzerPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
+      favicon: 'src/assets/favicon.png',
       template: 'src/index.html'
     }),
-    new MonacoWebpackPlugin({ languages: [] })
+    new MonacoWebpackPlugin({ languages: [] }),
   ]
 };
 

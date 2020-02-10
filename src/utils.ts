@@ -8,13 +8,6 @@ export async function getData(url: string, replace = true) {
   }
 }
 
-export async function ensureLatestFormatterIsLoaded() {
-  if (window.latestFormatter === undefined) {
-    await Timeout(100);
-    await ensureLatestFormatterIsLoaded();
-  }
-}
-
 export async function ensureAllFormattersAreLoaded() {
   if (window.formatters === undefined) {
     await Timeout(100);
