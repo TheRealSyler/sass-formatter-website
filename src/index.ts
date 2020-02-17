@@ -4,7 +4,7 @@ import { wireTmGrammars } from 'monaco-editor-textmate';
 
 import { loadWASM } from 'onigasm';
 import { InitFormatterVersionSelection } from './selectVersion';
-import { initialEditorValue } from './utils';
+import { initialEditorValue, getBugReportLinkBody } from './utils';
 import { getGrammar } from './grammar';
 import { getTheme } from './theme';
 import { formatters } from '../npm_packages/sass-formatter/superGlue';
@@ -38,6 +38,7 @@ InitFormatterVersionSelection();
 
   const editorContainer = document.getElementById('editor')!;
   const loader = document.getElementById('loader')!;
+  const bugReport = document.getElementById('bug-report') as HTMLAnchorElement;
 
   const editorSettings: monaco.editor.IStandaloneEditorConstructionOptions = {
     value: initialEditorValue,
@@ -49,6 +50,12 @@ InitFormatterVersionSelection();
     renderWhitespace: 'all'
   };
   const editor = monaco.editor.create(editorContainer, editorSettings);
+
+  bugReport.addEventListener('mousedown', () => {
+    bugReport.href = `https://github.com/TheRealSyler/sass-formatter/issues/new?assignees=TheRealSyler&labels=bug&template=bug_report.md&title=${getBugReportLinkBody(
+      editor.getModel()?.getValue()
+    )}`;
+  });
 
   window.addEventListener('resize', () => {
     editor.layout();

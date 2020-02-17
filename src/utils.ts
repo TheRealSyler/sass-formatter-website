@@ -23,7 +23,30 @@ export function Timeout(time: number) {
   });
 }
 
-export const initialEditorValue = `$bg: #1E1E1E
+export function getBugReportLinkBody(text?: string) {
+  if (text) {
+    const a = `**Describe the bug**
+A clear and concise description of what the bug is.
+
+**To Reproduce**
+Steps to reproduce the behavior:
+    
+**Expected behavior**
+A clear and concise description of what you expected to happen.
+
+**Code**
+\`\`\`sass
+${text}
+\`\`\`
+`;
+    return `&body=${encodeURIComponent(a)}`;
+  }
+  return '';
+}
+
+export const initialEditorValue =
+  new URL(window.location.href).searchParams.get('value') ||
+  `$bg: #1E1E1E
 $text: #9cdcfe
 $shadow: #0002
 $fonts: monaco, Consolas, 'Lucida Console', monospace
