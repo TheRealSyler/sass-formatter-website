@@ -26,7 +26,7 @@ export async function CheckSassFormatterPackages() {
     imports: [],
     keys: [],
   };
-  const versions = getVersionToDownload(registry);
+  const versions = Object.keys(registry.versions);
   for (let i = 0; i < versions.length; i++) {
     const key = versions[i];
 
@@ -75,34 +75,4 @@ export async function CheckSassFormatterPackages() {
   logAction(action(registryFilePath), registryFilePath);
 
   logInfo('Finished Checking packages.');
-}
-function getVersionToDownload(registry: npmRegistry) {
-  const tempVersions = Object.values(registry.versions).reduce<{
-    [key: string]: { [key: string]: number };
-  }>((acc, val) => {
-    const ver = val.version.split('.');
-    if (!acc[ver[0]]) {
-      acc[ver[0]] = {};
-    }
-
-    if (!acc[ver[0]][ver[1]] || acc[ver[0]][ver[1]] < +ver[2]) {
-      acc[ver[0]][ver[1]] = +ver[2];
-    }
-    return acc;
-  }, {});
-  const versions: string[] = [];
-  for (const key in tempVersions) {
-    if (Object.prototype.hasOwnProperty.call(tempVersions, key)) {
-      const majorObj = tempVersions[key];
-      const major = key;
-      for (const k in majorObj) {
-        if (Object.prototype.hasOwnProperty.call(majorObj, k)) {
-          const minor = k;
-          const patch = majorObj[k];
-          versions.push(`${major}.${minor}.${patch}`);
-        }
-      }
-    }
-  }
-  return versions;
 }
