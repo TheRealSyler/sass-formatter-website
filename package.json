@@ -4,10 +4,10 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
-    "postinstall": "npm run get-sass-formatter-versions",
-    "start": "npm run get-sass-formatter-versions && webpack-dev-server",
-    "get-sass-formatter-versions": "ts-node scripts/run.ts",
-    "build": "npm run get-sass-formatter-versions && webpack --mode production"
+    "postinstall": "yarn download",
+    "start": "yarn download && webpack-dev-server",
+    "download": "ts-node scripts/run.ts",
+    "build": "yarn download && webpack --mode production"
   },
   "author": "Syler",
   "license": "MIT",

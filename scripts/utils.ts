@@ -12,14 +12,14 @@ export const logInfo = (message: string) =>
   console.log(
     styler(`\n${message}\n`, {
       color: '#eee',
-      'font-weight': 'bold'
+      'font-weight': 'bold',
     })
   );
 export const logErr = (message: string) =>
   console.log(
     styler(message, {
       'font-weight': 'bold',
-      color: 'red'
+      color: 'red',
     })
   );
 
@@ -31,7 +31,7 @@ export const logAction = (action: string, message: string, additionalInfo?: stri
   console.log(
     `${openBracket}${faintText(action.padEnd(11))}${closeBracket} ${styler(message, {
       'font-weight': 'bold',
-      color: '#f46'
+      color: '#f46',
     })} ${styler(additionalInfo ? additionalInfo : '', '#ccc')}`
   );
 
@@ -47,19 +47,19 @@ export const logSassFormatterInfo = (action: string, version: string, green?: bo
 export const sassFormatterVersion = (version: string) =>
   styler(version, {
     'font-weight': 'bold',
-    color: '#aff'
+    color: '#aff',
   });
 
 export async function installNpmPackages(path: string, verbose = false) {
   if (verbose) {
     //@ts-ignore
-    const { stderr, stdout } = await Exec(`cd ${path} && npm i`);
+    const { stderr, stdout } = await Exec(`cd ${path} && yarn`);
     if (stderr) {
       console.log(stderr);
     }
     console.log(stdout);
   } else {
-    await Exec(`cd ${path} && npm i`);
+    await Exec(`cd ${path} && yarn`);
   }
 
   if (!existsSync(`${path}/node_modules`)) {
@@ -71,13 +71,13 @@ export async function installNpmPackages(path: string, verbose = false) {
   }
 }
 
-export async function unpackPackage(url: string, path: string) {
-  return new Promise(async res => {
-    get(url, r => {
+export async function downloadPackage(url: string, path: string) {
+  return new Promise(async (res) => {
+    get(url, (r) => {
       r.pipe(
         x({
           strip: 1,
-          C: path
+          C: path,
         })
       );
     }).on('finish', () => res());

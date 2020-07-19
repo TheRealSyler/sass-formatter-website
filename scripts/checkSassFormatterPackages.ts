@@ -5,8 +5,8 @@ import {
   logInfo,
   logAction,
   logSassFormatterInfo,
-  unpackPackage,
-  installNpmPackages
+  downloadPackage,
+  installNpmPackages as installNpmPackage,
 } from './utils';
 import { npmRegistry } from './interfaces';
 import { before02GlueCode, after02GlueCode, superGlueObj, getSuperGlueFile } from './glueTemplates';
@@ -24,11 +24,12 @@ export async function CheckSassFormatterPackages() {
 
   const superGlue: superGlueObj = {
     imports: [],
-    keys: []
+    keys: [],
   };
+  const versions = getVersionToDownload(registry);
+  for (let i = 0; i < versions.length; i++) {
+    const key = versions[i];
 
-  let i = 0;
-  for (const key in registry.versions) {
     if (registry.versions.hasOwnProperty(key)) {
       const version = registry.versions[key];
 
@@ -37,12 +38,12 @@ export async function CheckSassFormatterPackages() {
       if (!existsSync(`${currentPackagePath}/package.json`)) {
         await ensureDir(currentPackagePath);
         logSassFormatterInfo('Downloading', key);
-        await unpackPackage(version.dist.tarball, currentPackagePath);
+        await downloadPackage(version.dist.tarball, currentPackagePath);
       }
 
       if (!existsSync(`${currentPackagePath}/node_modules`)) {
         logSassFormatterInfo('Installing', key);
-        await installNpmPackages(currentPackagePath, true);
+        await installNpmPackage(currentPackagePath, false);
         logSassFormatterInfo('Installed', key, true);
       }
 
@@ -59,8 +60,6 @@ export async function CheckSassFormatterPackages() {
 
       superGlue.imports.push(`import { format as format${i} } from './${key}/glue';`);
       superGlue.keys.push(`'${key}': format${i},`);
-
-      i++;
     }
   }
 
@@ -76,4 +75,34 @@ export async function CheckSassFormatterPackages() {
   logAction(action(registryFilePath), registryFilePath);
 
   logInfo('Finished Checking packages.');
+}
+function getVersionToDownload(registry: npmRegistry) {
+  const tempVersions = Object.values(registry.versions).reduce<{
+    [key: string]: { [key: string]: number };
+  }>((acc, val) => {
+    const ver = val.version.split('.');
+    if (!acc[ver[0]]) {
+      acc[ver[0]] = {};
+    }
+
+    if (!acc[ver[0]][ver[1]] || acc[ver[0]][ver[1]] < +ver[2]) {
+      acc[ver[0]][ver[1]] = +ver[2];
+    }
+    return acc;
+  }, {});
+  const versions: string[] = [];
+  for (const key in tempVersions) {
+    if (Object.prototype.hasOwnProperty.call(tempVersions, key)) {
+      const majorObj = tempVersions[key];
+      const major = key;
+      for (const k in majorObj) {
+        if (Object.prototype.hasOwnProperty.call(majorObj, k)) {
+          const minor = k;
+          const patch = majorObj[k];
+          versions.push(`${major}.${minor}.${patch}`);
+        }
+      }
+    }
+  }
+  return versions;
 }
