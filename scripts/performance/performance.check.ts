@@ -9,8 +9,6 @@ import {
   info
 } from './performance.utils';
 
-import { grey } from './performance.utils';
-
 import { readFileSync } from 'fs-extra';
 import { sassFormatterVersion } from '../utils';
 
@@ -37,6 +35,7 @@ const first: {
 function testPerformance({ file, func, lines, times, version }: TestArgs) {
   const start = process.hrtime.bigint();
   const medianArr: number[] = [];
+
   for (let i = 0; i < times; i++) {
     const medianStart = process.hrtime.bigint();
     try {
@@ -44,6 +43,11 @@ function testPerformance({ file, func, lines, times, version }: TestArgs) {
     } catch (e) {
       return [sassFormatterVersion(version), `\x1b[1;38;2;255;0;0mERROR\x1b[m`];
     }
+    // console.log(
+    //   `${sassFormatterVersion(version)} ${i}: ${Number(
+    //     (process.hrtime.bigint() - medianStart) / BigInt(1e6)
+    //   )}ms`
+    // );
     medianArr.push(Number((process.hrtime.bigint() - medianStart) / BigInt(1e6)));
   }
 

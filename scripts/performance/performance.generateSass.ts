@@ -1,4 +1,5 @@
 import { Random } from 'suf';
+//@ts-ignore
 import { all as allCssProps } from 'known-css-properties';
 import { writeFileSync } from 'fs';
 
