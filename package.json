@@ -1,7 +1,6 @@
 {
   "name": "sass-formatter-website",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/index.html",
   "scripts": {
     "postinstall": "yarn download",
