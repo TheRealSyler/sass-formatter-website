@@ -1,7 +1,6 @@
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
 import { Registry } from 'monaco-textmate';
 import { wireTmGrammars } from 'monaco-editor-textmate';
-
 import { loadWASM } from 'onigasm';
 import { InitFormatterVersionSelection } from './selectVersion';
 import { initialEditorValue, getBugReportLinkBody } from './utils';
