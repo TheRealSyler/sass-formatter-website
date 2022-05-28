@@ -29,10 +29,10 @@ export async function CheckSassFormatterPackages() {
   const versions = Object.keys(registry.versions);
   for (let i = 0; i < versions.length; i++) {
     const key = versions[i];
-    const [major, minor, patch] = key.split('.')
+    const [major, minor] = key.split('.')
     const [nextMajor, nextMinor] = versions[i + 1]?.split('.') || []
 
-    if (major === nextMajor && minor === nextMinor && (+major !== 0 || +patch !== 1)) {
+    if (major === nextMajor && minor === nextMinor && key !== '0.0.1') {
       logSassFormatterInfo('Skip', key);
     } else {
       if (registry.versions.hasOwnProperty(key)) {
