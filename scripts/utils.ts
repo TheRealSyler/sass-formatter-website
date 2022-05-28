@@ -29,18 +29,17 @@ const closeBracket = faintText(']');
 
 export const logAction = (action: string, message: string, additionalInfo?: string) =>
   console.log(
-    `${openBracket}${faintText(action.padEnd(11))}${closeBracket} ${styler(message, {
+    `${openBracket}${faintText(action.padEnd(13))}${closeBracket} ${styler(message, {
       'font-weight': 'bold',
       color: '#f46',
     })} ${styler(additionalInfo ? additionalInfo : '', '#ccc')}`
   );
 
-export const logSassFormatterInfo = (action: string, version: string, green?: boolean) =>
+export const logSassFormatterInfo = (action: string, version: string, color?: string) =>
   console.log(
-    `${openBracket}${
-      green
-        ? styler(action.padEnd(11), { color: '#0f0', 'font-weight': 'bold' })
-        : faintText(action.padEnd(11))
+    `${openBracket}${color
+      ? styler(action.padEnd(13), { color, 'font-weight': 'bold' })
+      : faintText(action.padEnd(13))
     }${closeBracket} ${sassFormatterVersion(version)}`
   );
 
@@ -71,14 +70,14 @@ export async function installNpmPackages(path: string, verbose = false) {
   }
 }
 
-export async function downloadPackage(url: string, path: string) {
+export async function downloadPackage(url: string, path: string): Promise<void> {
   return new Promise(async (res) => {
     get(url, (r) => {
       r.pipe(
         x({
           strip: 1,
           C: path,
-        })
+        }) as any
       );
     }).on('finish', () => res());
   });

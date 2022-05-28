@@ -29,44 +29,54 @@ export async function CheckSassFormatterPackages() {
   const versions = Object.keys(registry.versions);
   for (let i = 0; i < versions.length; i++) {
     const key = versions[i];
+    const [major, minor, patch] = key.split('.')
+    const [nextMajor, nextMinor] = versions[i + 1]?.split('.') || []
 
-    if (registry.versions.hasOwnProperty(key)) {
-      const version = registry.versions[key];
+    if (major === nextMajor && minor === nextMinor && (+major !== 0 || +patch !== 1)) {
+      logSassFormatterInfo('Skip', key);
+    } else {
+      if (registry.versions.hasOwnProperty(key)) {
+        const version = registry.versions[key];
 
-      const currentPackagePath = `${basePath}/${key}`;
+        const currentPackagePath = `${basePath}/${key}`;
 
-      if (!existsSync(`${currentPackagePath}/package.json`)) {
-        await ensureDir(currentPackagePath);
-        logSassFormatterInfo('Downloading', key);
-        await downloadPackage(version.dist.tarball, currentPackagePath);
-      }
-
-      if (!existsSync(`${currentPackagePath}/node_modules`)) {
-        logSassFormatterInfo('Installing', key);
-        await installNpmPackage(currentPackagePath, false);
-        logSassFormatterInfo('Installed', key, true);
-      }
-
-      const gluePath = `${currentPackagePath}/glue.ts`;
-      if (!existsSync(gluePath)) {
-        if (+key.split('.')[1] <= 2) {
-          writeFileSync(gluePath, before02GlueCode);
-          logAction('Write', gluePath, 'before @0.2.0');
+        if (!existsSync(`${currentPackagePath}/package.json`)) {
+          await ensureDir(currentPackagePath);
+          logSassFormatterInfo('Downloading', key);
+          await downloadPackage(version.dist.tarball, currentPackagePath);
         } else {
-          writeFileSync(gluePath, after02GlueCode);
-          logAction('Write', gluePath, 'after @0.2.0');
+          logSassFormatterInfo('Skip Download', key);
         }
-      }
 
-      superGlue.imports.push(`import { format as format${i} } from './${key}/glue';`);
-      superGlue.keys.push(`'${key}': format${i},`);
+        if (!existsSync(`${currentPackagePath}/node_modules`)) {
+          logSassFormatterInfo('Installing', key);
+          await installNpmPackage(currentPackagePath, false);
+          logSassFormatterInfo('Installed', key, '#0f0');
+        } else {
+          logSassFormatterInfo('Skip Install', key, '#2fa');
+        }
+
+        const gluePath = `${currentPackagePath}/glue.ts`;
+        if (!existsSync(gluePath)) {
+          if (+key.split('.')[1] <= 2) {
+            writeFileSync(gluePath, before02GlueCode);
+            logAction('Write', gluePath, 'before @0.2.0');
+          } else {
+            writeFileSync(gluePath, after02GlueCode);
+            logAction('Write', gluePath, 'after @0.2.0');
+          }
+        }
+
+        superGlue.imports.push(`import { format as format${i} } from './${key}/glue';`);
+        superGlue.keys.push(`'${key}': format${i},`);
+      }
     }
   }
 
   const action = (p: string) => (existsSync(p) ? 'Update' : 'Write');
 
   const superGlueFilePath = `${basePath}/superGlue.ts`;
-
+  await ensureFile(superGlueFilePath);
   writeFileSync(superGlueFilePath, getSuperGlueFile(superGlue));
   logAction(action(superGlueFilePath), superGlueFilePath);
 
