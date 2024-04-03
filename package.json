@@ -37,7 +37,7 @@
     "node-fetch": "^2.6.1",
     "sass": "^1.72.0",
     "sass-loader": "^14.1.1",
-    "style-loader": "^1.1.3",
+    "style-loader": "^3.3.4",
     "suf": "^1.0.1",
     "suf-node": "^1.3.3",
     "tar": "^6.1.11",
