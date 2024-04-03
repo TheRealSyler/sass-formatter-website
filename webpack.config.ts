@@ -1,7 +1,7 @@
-import { resolve } from 'path';
-import webpack = require('webpack');
-import MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-import HtmlWebpackPlugin = require('html-webpack-plugin');
+import { resolve } from 'path'
+import webpack = require('webpack')
+import MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+import HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // import BAP = require('webpack-bundle-analyzer');
 
@@ -32,16 +32,18 @@ const config: webpack.Configuration = {
       {
         test: /\.wasm$/,
         type: 'javascript/auto',
-        loaders: ['arraybuffer-loader']
+        loader: 'arraybuffer-loader'
       }
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    fallback: { path: require.resolve("path-browserify") }
   },
   output: {
     filename: '[name].bundle.js',
-    path: resolve(__dirname, 'dist')
+    path: resolve(__dirname, 'dist'),
+    hashFunction: 'xxhash64'
   },
 
   plugins: [
@@ -53,6 +55,6 @@ const config: webpack.Configuration = {
     }),
     new MonacoWebpackPlugin({ languages: [] }),
   ]
-};
+}
 
-export default config;
+export default config

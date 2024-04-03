@@ -16,7 +16,7 @@ export async function ensureAllFormattersAreLoaded() {
 }
 
 export function Timeout(time: number) {
-  return new Promise((res) => {
+  return new Promise<void>((res) => {
     setTimeout(() => {
       res();
     }, time);
